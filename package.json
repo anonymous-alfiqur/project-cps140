@@ -3,6 +3,7 @@
     "start": "servor --reload"
   },
   "dependencies": {
-    "servor": "^4.0.2"
+    "servor": "^4.0.2",
+    "prettier": "^1.15.3"
   }
 }
