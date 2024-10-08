@@ -78,3 +78,8 @@ div {
   background-color: cadetblue;
   color: #000;
 }
+.flexboximage{
+  display:flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
