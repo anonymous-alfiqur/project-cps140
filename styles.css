@@ -83,3 +83,6 @@ div {
   justify-content: center;
   margin-top: 2rem;
 }
+body {
+  background-image: url("");
+}
