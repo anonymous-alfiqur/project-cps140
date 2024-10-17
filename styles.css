@@ -6,7 +6,7 @@ body {
   margin: 0;
   font-family: system-ui, sans-serif;
   color: black;
-  background-color: blanchedalmond;
+  background-color: white;
 }
 
 nav {
@@ -17,7 +17,7 @@ nav {
   padding: 0.5rem;
   gap: 0.5rem;
   border-bottom: solid 1px #aaa;
-  background-color: blanchedalmond;
+  background-color: white;
 }
 
 nav a {
