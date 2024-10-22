@@ -6,7 +6,7 @@ body {
   margin: 0;
   font-family: system-ui, sans-serif;
   color: black;
-  background-color: blanchedalmond;
+  background-color: white;
 }
 
 nav {
@@ -17,7 +17,7 @@ nav {
   padding: 0.5rem;
   gap: 0.5rem;
   border-bottom: solid 1px #aaa;
-  background-color: blanchedalmond;
+  background-color: white;
 }
 
 nav a {
@@ -45,44 +45,52 @@ h1 {
   font-weight: bold;
   font-size: 1.5rem;
 }
-p{
+
+p {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 1.0rem;
   word-spacing: 0.25rem;
-  font-style:italic;
+  font-style: italic;
 }
+
 div {
-  display:flex;
+  display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
 }
-.container{
-  display:flex;
+
+.container {
+  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  border:5px solid black;
+  border: 5px solid black;
 }
+
 .box {
   width: 150px;
   height: 150px;
   font-size: 1em;
   text-align: center;
 }
-#box1{
+
+#box1 {
   background-color: cadetblue;
   color: #000;
 }
-#box2{
+
+#box2 {
   background-color: cadetblue;
   color: #000;
 }
-.flexboximage{
-  display:flex;
+
+.flexboximage {
+  display: flex;
   justify-content: center;
   margin-top: 2rem;
 }
+
 body {
   background-image: url("");
 }
