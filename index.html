@@ -29,6 +29,27 @@
     <Li><b>Jesko Attack</b></Li>
     <Li><b>Jesko Absolut</b></Li>
     <br>
+    <form class="form">
+      <label>
+        Name:<input type="text" required/>
+      </label>
+      <label>
+        Message:<textarea styles="width:80%"></textarea>
+      </label>
+    <form>
+      Email:<input type="text" name="email" id="email">
+    </form>
+    <label>
+      Opt in to emails <input type="checkbox"/>
+    </label>
+    <input type="submit" style="width: 28%;" onclick="formsubmission()"/>
+    </form>
+    <script>
+      function formsubmission() {
+        alert("Your form was successfully submitted!")
+      }
+    </script>
+    <br>
     <div>
       <img src="images/koenigsegg-jesko-2.jpg" height="300" width="400">
       <br>
