@@ -38,7 +38,7 @@ nav a[aria-current='page'] {
 }
 
 .dropbtn {
-  background-color:white;
+  background-color: white;
   color: #cc0d0d;
   padding: 16px;
   font-size: 16px;
@@ -55,9 +55,9 @@ nav a[aria-current='page'] {
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  right:0;
+  right: 0;
 }
 
 .dropdown-content a {
@@ -67,11 +67,17 @@ nav a[aria-current='page'] {
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-.dropdown:hover .dropbtn {background-color: #aaa;}
+.dropdown:hover .dropbtn {
+  background-color: #aaa;
+}
 
 main {
   padding: 1rem;
