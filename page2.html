@@ -58,5 +58,25 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
-
+  <form class="form">
+    <label>
+      Name:<input type="text" required/>
+    </label>
+    <label>
+      Message:<textarea styles="width:80%"></textarea>
+    </label>
+  <form>
+    Email:<input type="text" name="email" id="email">
+  </form>
+  <label>
+    Opt in to emails <input type="checkbox"/>
+  </label>
+  <input type="submit" style="width: 28%;" onclick="formsubmission()"/>
+  </form>
+  <script>
+    function formsubmission() {
+      alert(document.getElementById("title").textContent)
+    }
+  </script>
+  <br>
 </html>
