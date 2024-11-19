@@ -58,6 +58,29 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
+  <br>
+  <table id="table">
+    <thead>
+      <tr>
+        <td><b>Name</b></td>
+        <td><b>Model</b></td>
+        <td><b>Year</b></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Koenigsegg</td>
+        <td>Attack</td>
+        <td>2023</td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    const cartype=["all", "car" , "attack" , "2023"]
+    cartype.forEach((car)=> {
+      console.log(car);
+    })
+  </script>
   <form class="form">
     <label>
       Name:<input type="text" required/>
