@@ -35,6 +35,27 @@
     <h1>History</h1>
     <h3>Koenigsegg</h3>
   </main>
+  <div>
+    <label>Dark Mode
+      <input type="checkbox" onchange="toggleDarkMode()"> 
+    </label>
+    <script>
+      let isDarkMode = false;
+      const body = document.body
+
+      const toggleDarkMode = () => {
+        consle.log("Using dark mode: " + isDarkMode);
+        isDarkMode = !isDarkMode
+        if (isDarkMode) {
+          body.style["backgroundColor"] = "black";
+          body.style["color"] = "white";
+        } else {
+          body.style["backgroundColor"] = "white";
+          body.style["color"] = "black";
+        }
+      }
+    </script>
+  </div>
 </body>
 <div style="color:black">
   <p>On August 12, 1994, a 22-year-old Christian
@@ -58,7 +79,13 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
-  <br>
+  <br> 
+  <div> Select a Car
+    <select id="modle">
+
+
+    </select>
+  </div>
   <table id="table">
     <thead>
       <tr>
@@ -76,9 +103,14 @@
     </tbody>
   </table>
   <script>
-    const cartype=["all", "car" , "attack" , "2023"]
+    const cartype=["all", "Attack" , "Absolut"];
+    const select=document.getElementById("modle");
     cartype.forEach((car)=> {
       console.log(car);
+      option = document.createElement("option");
+      option.value = car;
+      option.text = car;
+      select.appendChild(option);
     })
   </script>
   <form class="form">
