@@ -36,26 +36,27 @@
     <h3>Koenigsegg</h3>
   </main>
   <div>
-    <label>Dark Mode
-      <input type="checkbox" onchange="toggleDarkMode()"> 
+    <label> Dark Mode
+      <input type="checkbox" onchange="toggleDarkMode()">
     </label>
     <script>
-      let isDarkMode = false;
-      const body = document.body
-
+      let isDarkMode= false;
+      const body= document.body
+   
       const toggleDarkMode = () => {
-        consle.log("Using dark mode: " + isDarkMode);
-        isDarkMode = !isDarkMode
+        console.log("Using dark mode: "+isDarkMode);
+        isDarkMode=!isDarkMode
         if (isDarkMode) {
-          body.style["backgroundColor"] = "black";
-          body.style["color"] = "white";
+          body.style["backgroundColor"]="black";
+          body.style["color"]="white";
         } else {
-          body.style["backgroundColor"] = "white";
-          body.style["color"] = "black";
+          body.style["backgroundColor"]="white"
+          body.style["color"]="black";
+          
         }
       }
     </script>
-  </div>
+   </div>   
 </body>
 <div style="color:black">
   <p>On August 12, 1994, a 22-year-old Christian
