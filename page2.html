@@ -95,15 +95,33 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Koenigsegg</td>
-        <td>Attack</td>
-        <td>2023</td>
-      </tr>
     </tbody>
   </table>
   <script>
-    const cartype=["all", "Attack" , "Absolut"];
+     const car=[{
+      Name: "Koenigsegg",
+      Model: "Attack",
+      Year: "2023",
+    }, {
+      Name: "Koenigsegg",
+      Model: "Absolut",
+      Year: "2023"
+    }
+  ]
+    const writeTableRow = (table, cartable) => {
+       const newRow = table.insertRow();
+
+       newRow.innerHTML = `<tr id=${car.Name}>
+           <td>${cartable.Name}</td>
+           <td>${cartable.Model}</td>
+           <td>${cartable.Year}</td>
+       </tr>`;
+   }
+   const tableBody = document.getElementsByTagName("tbody")[0];
+   writeTableRow(tableBody, car[1])
+    </script>
+  <script>
+    const cartype=["All", "Attack" , "Absolut"];
     const select=document.getElementById("modle");
     cartype.forEach((car)=> {
       console.log(car);
