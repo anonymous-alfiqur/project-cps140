@@ -15,6 +15,6 @@ if (d.getHours() > 20 || d.getHours() < 8) {
     body.styles["backgroundColor"] = "black";
     body.style["color"] = "white";
 } else {
-    Body.style["backgroundColor"] = "white";
+    body.style["backgroundColor"] = "white";
     body.style["color"] = "black";
 }

@@ -37,7 +37,7 @@
   </main>
   <div>
     <label>Dark Mode
-      <input type="checkbox" onchange="toggleDarkMode()"> 
+      <input type="checkbox" onchange="toggleDarkMode()">
     </label>
     <script>
       let isDarkMode = false;
@@ -79,7 +79,7 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
-  <br> 
+  <br>
   <div> Select a Car
     <select id="modle">
 
@@ -98,7 +98,7 @@
     </tbody>
   </table>
   <script>
-     const car=[{
+    const car = [{
       Name: "Koenigsegg",
       Model: "Attack",
       Year: "2023",
@@ -107,23 +107,33 @@
       Model: "Absolut",
       Year: "2023"
     }
-  ]
+    ]
     const writeTableRow = (table, cartable) => {
-       const newRow = table.insertRow();
+      const newRow = table.insertRow();
 
-       newRow.innerHTML = `<tr id=${car.Name}>
+      newRow.innerHTML = `<tr id=${car.Name}>
            <td>${cartable.Name}</td>
            <td>${cartable.Model}</td>
            <td>${cartable.Year}</td>
        </tr>`;
-   }
-   const tableBody = document.getElementsByTagName("tbody")[0];
-   writeTableRow(tableBody, car[1])
-    </script>
+    }
+    const makeTable = () => {
+      const tableBody = document.getElementsByTagName("tbody")[0];
+      tableBody.innerHTML = "";
+      if (select.value == "all") {
+        car.forEach((c) => {
+          writeTableRow(tableBody, c)
+        })
+      } else {
+        const filtered = car.filter((c)=>(c.type ==> select))
+      }
+    }
+    makeTable()
+  </script>
   <script>
-    const cartype=["All", "Attack" , "Absolut"];
-    const select=document.getElementById("modle");
-    cartype.forEach((car)=> {
+    const cartype = ["All", "Attack", "Absolut"];
+    const select = document.getElementById("modle");
+    cartype.forEach((car) => {
       console.log(car);
       option = document.createElement("option");
       option.value = car;
@@ -133,18 +143,18 @@
   </script>
   <form class="form">
     <label>
-      Name:<input type="text" required/>
+      Name:<input type="text" required />
     </label>
     <label>
       Message:<textarea styles="width:80%"></textarea>
     </label>
-  <form>
-    Email:<input type="text" name="email" id="email">
-  </form>
-  <label>
-    Opt in to emails <input type="checkbox"/>
-  </label>
-  <input type="submit" style="width: 28%;" onclick="formsubmission()"/>
+    <form>
+      Email:<input type="text" name="email" id="email">
+    </form>
+    <label>
+      Opt in to emails <input type="checkbox" />
+    </label>
+    <input type="submit" style="width: 28%;" onclick="formsubmission()" />
   </form>
   <script>
     function formsubmission() {
@@ -152,4 +162,5 @@
     }
   </script>
   <br>
+
 </html>
