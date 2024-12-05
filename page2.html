@@ -81,7 +81,7 @@
   </div>
   <br>
   <div> Select a Car
-    <select id="modle">
+    <select id="model" onchange="makeTable()">
 
 
     </select>
@@ -97,6 +97,17 @@
     <tbody>
     </tbody>
   </table>
+  <script>
+    const cartype = ["All", "Attack", "Absolut"];
+    const select = document.getElementById("model");
+    cartype.forEach((car) => {
+      console.log(car);
+      option = document.createElement("option");
+      option.value = car;
+      option.text = car;
+      select.appendChild(option);
+    })
+  </script>
   <script>
     const car = [{
       Name: "Koenigsegg",
@@ -120,27 +131,19 @@
     const makeTable = () => {
       const tableBody = document.getElementsByTagName("tbody")[0];
       tableBody.innerHTML = "";
-      if (select.value == "all") {
+      if (select.value == "All") {
         car.forEach((c) => {
           writeTableRow(tableBody, c)
         })
       } else {
-        const filtered = car.filter((c)=>(c.type ==> select))
+        const filtered = car.filter((c) => select.value == c.Model)
+        console.log(filtered);
+        filtered.forEach((c) => writeTableRow(tableBody, c))
       }
     }
     makeTable()
   </script>
-  <script>
-    const cartype = ["All", "Attack", "Absolut"];
-    const select = document.getElementById("modle");
-    cartype.forEach((car) => {
-      console.log(car);
-      option = document.createElement("option");
-      option.value = car;
-      option.text = car;
-      select.appendChild(option);
-    })
-  </script>
+
   <form class="form">
     <label>
       Name:<input type="text" required />
