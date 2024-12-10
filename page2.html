@@ -8,7 +8,7 @@
       color: gold
     }
   </style>
-  <title>Other page</title>
+  <title>MegaCars</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" href="styles.css" />
@@ -19,16 +19,13 @@
 
 <body style="color:rgb(0, 0, 0)">
   <nav>
-    <a href="/">Home</a>
-    <a href="/page2.html" aria-current="page">Other page</a>
-    <a href="/page3.html">About</a>
     </style>
     <div class="dropdown">
       <button class="dropbtn"><i class="fa-solid fa-bars"></i></button>
       <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+        <a href="/" aria-current="page">Home</a>
+        <a href="/page2.html">MegaCars</a>
+        <a href="/page3.html">About</a>
       </div>
   </nav>
   <main>
@@ -74,96 +71,23 @@
     <img src="/images/koenigsegg-backside-jesko-hd-wallpaper-preview.jpg" height="325" width="560">
   </div>
   <br>
-  <div><iframe width="560" height="315" src="https://www.youtube.com/embed/k4xfZsgoUtk?si=viOALa_tr7jgVW0q"
+  <div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6xY_LQzTyus?si=wfgxiQzkCR3Is4nU"
       title="YouTube video player" frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
   <br>
-  <div> Select a Car
-    <select id="model" onchange="makeTable()">
-
-
-    </select>
+  <div>
+    <img src="images/koenigsegg-jesko-2.jpg" height="425" width="560">
+    <br>
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/E8fYy_5gXDg?si=NqjsFbb-V1EfkGVY"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <br>
   </div>
-  <table id="table">
-    <thead>
-      <tr>
-        <td><b>Name</b></td>
-        <td><b>Model</b></td>
-        <td><b>Year</b></td>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
-  <script>
-    const cartype = ["All", "Attack", "Absolut"];
-    const select = document.getElementById("model");
-    cartype.forEach((car) => {
-      console.log(car);
-      option = document.createElement("option");
-      option.value = car;
-      option.text = car;
-      select.appendChild(option);
-    })
-  </script>
-  <script>
-    const car = [{
-      Name: "Koenigsegg",
-      Model: "Attack",
-      Year: "2023",
-    }, {
-      Name: "Koenigsegg",
-      Model: "Absolut",
-      Year: "2023"
-    }
-    ]
-    const writeTableRow = (table, cartable) => {
-      const newRow = table.insertRow();
-
-      newRow.innerHTML = `<tr id=${car.Name}>
-           <td>${cartable.Name}</td>
-           <td>${cartable.Model}</td>
-           <td>${cartable.Year}</td>
-       </tr>`;
-    }
-    const makeTable = () => {
-      const tableBody = document.getElementsByTagName("tbody")[0];
-      tableBody.innerHTML = "";
-      if (select.value == "All") {
-        car.forEach((c) => {
-          writeTableRow(tableBody, c)
-        })
-      } else {
-        const filtered = car.filter((c) => select.value == c.Model)
-        console.log(filtered);
-        filtered.forEach((c) => writeTableRow(tableBody, c))
-      }
-    }
-    makeTable()
-  </script>
-
-  <form class="form">
-    <label>
-      Name:<input type="text" required />
-    </label>
-    <label>
-      Message:<textarea styles="width:80%"></textarea>
-    </label>
-    <form>
-      Email:<input type="text" name="email" id="email">
-    </form>
-    <label>
-      Opt in to emails <input type="checkbox" />
-    </label>
-    <input type="submit" style="width: 28%;" onclick="formsubmission()" />
-  </form>
-  <script>
-    function formsubmission() {
-      alert(document.getElementById("title").textContent)
-    }
-  </script>
-  <br>
 
 </html>
