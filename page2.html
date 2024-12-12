@@ -17,7 +17,7 @@
   <script src="https://kit.fontawesome.com/adee53eb87.js" crossorigin="anonymous"></script>
 </head>
 
-<body style="color:rgb(0, 0, 0)">
+<body>
   <nav>
     </style>
     <div class="dropdown">
@@ -30,7 +30,7 @@
   </nav>
   <main>
     <h1>History</h1>
-    <h3>Koenigsegg</h3>
+    <hr>
   </main>
   <div>
     <label>Dark Mode
@@ -41,7 +41,7 @@
       const body = document.body
 
       const toggleDarkMode = () => {
-        consle.log("Using dark mode: " + isDarkMode);
+        console.log("Using dark mode: " + isDarkMode);
         isDarkMode = !isDarkMode
         if (isDarkMode) {
           body.style["backgroundColor"] = "black";
@@ -53,13 +53,16 @@
       }
     </script>
   </div>
-</body>
-<div style="color:black">
+  <div>
   <p>On August 12, 1994, a 22-year-old Christian
     von Koenigsegg decided to follow his dream
     and build the world’s greatest sports car.
     Koenigsegg Automotive is born.</p>
   <br>
+  <div class="img-14">
+    <img src="/images/koenigsegg-image-14.jpg" height="600" width="500" style="margin-right: 10px;"> 
+    <img src="/images/Koenigsegg-Stream_3 copy.png" height="600" width="500">
+  </div>
   <div class="contaier">
     <div class="box" id="box1"> Jesko Attack</div>
     <div class="box" id="box2"> Jesko Absolut</div>
@@ -68,6 +71,7 @@
   </div>
   <br>
   <div>
+    <p>The Jesko Absolut is powered by a 1280 bhp (1600 bhp on E85), twin turbo charged V8 engine, featuring the world’s lightest V8 crankshaft, weighing just 12.5 kg.</p>
     <img src="/images/koenigsegg-backside-jesko-hd-wallpaper-preview.jpg" height="325" width="560">
   </div>
   <br>
@@ -79,6 +83,12 @@
   </div>
   <br>
   <div>
+    <p>The Jesko features a redesigned 5.0 litre twin-turbo V8
+      engine producing 1280 hp on standard gasoline and 1600 hp
+      on E85 biofuel (where available) alongside the revolutionary
+      new 9-speed Koenigsegg Light Speed Transmission
+      (LST). Advanced aerodynamics offer up to 1400 kg of
+      downforce, making it the ultimate track weapon.</p>
     <img src="images/koenigsegg-jesko-2.jpg" height="425" width="560">
     <br>
     <div>
@@ -89,5 +99,7 @@
     </div>
     <br>
   </div>
+</body>
+
 
 </html>
