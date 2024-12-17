@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Home</title>
+  <!-- <meta name= "description">Koenigsegg is a Swedish company that makes high-performance, hand-crafted supercars.</meta> -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" href="/images/favicon.ico">
+  <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="script.js"></script>
+  <script src="https://kit.fontawesome.com/adee53eb87.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav>
+    </style>
+    <div class="dropdown">
+      <button class="dropbtn"><i class="fa-solid fa-bars"></i></button>
+      <div class="dropdown-content">
+        <a href="/" aria-current="page">Home</a>
+        <a href="/page2.html">Jesko Attack</a>
+        <a href="/page3.html">Jesko Absolut</a>
+        <a herf="/page4.html">About</a>
+      </div>
+    </nav>
+    <main>
+      <h1>About</h1>
+      <!-- <br>
+      <a href="https://www.koenigsegg.com/home"><img src="/images/Koenigsegg-Logo.jpg" height="115" width="190"></a> -->
+      <hr>
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Introduction</title>
+    </head>
+    <body>
+        <h1>Introduction</h1>
+        <p>Hello! My name is <strong>Alfiqur</strong>.</p>
+        <p>I am a student at <em>Lynn Classical High School</em>, and this is a project for my early college HTML course.</p>
+    </body>
+      <div> Select a Car
+        <select id="model" onchange="makeTable()">
+  
+  
+        </select>
+      </div>
+      <table id="table">
+        <thead>
+          <tr>
+            <td><b>Name</b></td>
+            <td><b>Model</b></td>
+            <td><b>Year</b></td>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <script>
+        const cartype = ["All", "Attack", "Absolut"];
+        const select = document.getElementById("model");
+        cartype.forEach((car) => {
+          console.log(car);
+          option = document.createElement("option");
+          option.value = car;
+          option.text = car;
+          select.appendChild(option);
+        })
+      </script>
+      <script>
+        const car = [{
+          Name: "Koenigsegg",
+          Model: "Attack",
+          Year: "2023",
+        }, {
+          Name: "Koenigsegg",
+          Model: "Absolut",
+          Year: "2023"
+        }
+        ]
+        const writeTableRow = (table, cartable) => {
+          const newRow = table.insertRow();
+  
+          newRow.innerHTML = `<tr id=${car.Name}>
+               <td>${cartable.Name}</td>
+               <td>${cartable.Model}</td>
+               <td>${cartable.Year}</td>
+           </tr>`;
+        }
+        const makeTable = () => {
+          const tableBody = document.getElementsByTagName("tbody")[0];
+          tableBody.innerHTML = "";
+          if (select.value == "All") {
+            car.forEach((c) => {
+              writeTableRow(tableBody, c)
+            })
+          } else {
+            const filtered = car.filter((c) => select.value == c.Model)
+            console.log(filtered);
+            filtered.forEach((c) => writeTableRow(tableBody, c))
+          }
+        }
+        makeTable()
+      </script>
+  
+      <form class="form">
+        <label>
+          Name:<input type="text" required />
+        </label>
+        <label>
+          Message:<textarea styles="width:80%"></textarea>
+        </label>
+        <form>
+          Email:<input type="text" name="email" id="email">
+        </form>
+        <label>
+          Opt in to emails <input type="checkbox" />
+        </label>
+        <input type="submit" style="width: 28%;" onclick="formsubmission()" />
+      </form>
+      <script>
+        function formsubmission() {
+          alert(document.getElementById("title").textContent)
+        }
+      </script>
+    </main>
+  </body>
+  
+  </html>
